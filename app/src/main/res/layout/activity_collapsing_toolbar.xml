@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.ruiqin.materialdesign.activity.CollapsingToolbarActivity">
+
+
+    <!--正文-->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <ImageView
+                    android:id="@+id/collap_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"/>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/collap_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_anchor="@id/appBar"
+            app:layout_anchorGravity="bottom|end"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--侧滑-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/collap_navi_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

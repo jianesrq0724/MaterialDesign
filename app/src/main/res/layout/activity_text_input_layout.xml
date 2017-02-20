@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_text_input_layout"
+    android:layout_width="match_parent"    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ruiqin.materialdesign.activity.TextInputLayoutActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="测试1"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="测试2"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+
+    <android.support.design.widget.TextInputEditText
+        android:hint="测试3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <Button
+        android:id="@+id/btn_click"
+        android:text="点击测试"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>
